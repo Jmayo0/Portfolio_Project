@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="content">
+      <div id="loginContainer" class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <div class="input-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="registerLink">Register</a></p>
+      </div>
+      <div id="registerContainer" class="container" style="display: none">
+        <h2>Register</h2>
+        <form id="registerForm">
+          <div class="input-group">
+            <label for="regEmail">Email:</label>
+            <input type="email" id="regEmail" name="regEmail" required />
+          </div>
+          <div class="input-group">
+            <label for="regPassword">Password:</label>
+            <input
+              type="password"
+              id="regPassword"
+              name="regPassword"
+              required
+            />
+          </div>
+          <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="#" id="loginLink">Login</a></p>
+      </div>
+    </div>
+    <!-- HTML for the pop-up message -->
+    <div id="popupMessage" class="popup-message">
+      <div class="popup-content">
+        <span id="popupCloseBtn" class="popup-close-btn">&times;</span>
+        <p id="popupMessageText"></p>
+      </div>
+    </div>
+    <!-- Firebase SDK -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-app.js";
+      import { getAuth } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-auth.js";
+      import { getFirestore } from "https://www.gstatic.com/firebasejs/9.0.1/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyAAcvXe8HUQfxGuoakA_PEZOmqgbK1ScDo",
+        authDomain: "portfoliowebsite-e4245.firebaseapp.com",
+        projectId: "portfoliowebsite-e4245",
+        storageBucket: "portfoliowebsite-e4245.appspot.com",
+        messagingSenderId: "72206954186",
+        appId: "1:72206954186:web:cfb034fd237d79c33d8e33",
+        measurementId: "G-17CGXWG0FE",
+      };
+      // Initialize Firebase
+      const firebaseApp = initializeApp(firebaseConfig);
+      const auth = getAuth(firebaseApp);
+      const firestore = getFirestore(firebaseApp);
+    </script>
+  </body>
+</html>

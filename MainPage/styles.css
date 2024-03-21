@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Acumin-RPro";
+  src: url(Acumin-RPro.otf);
+}
+
+.header {
+  background-color: #191919; /* Dark background colour */
+  color: white; /* Text color */
+  padding: 30px; /* Padding around text */
+  display: flex; /* Flex layout for easy alignment */
+  justify-content: space-between; /* Align items with space between */
+  align-items: center; /* Vertically center items */
+  font-family: "Acumin-RPro";
+}
+
+.header__links {
+  display: flex;
+}
+
+.header__links a {
+  color: grey;
+  text-decoration: none;
+  margin-right: 20px; /* Spacing between links */
+}
+
+.header__links a.active {
+  color: white; /* Change to the desired colour for active link */
+}
+
+.header__center {
+  flex-grow: 1; /* Allow the center div to grow and take up remaining space */
+  text-align: center; /* Center align the text */
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.main-section {
+  background-color: #212121; /* Background colour for the main section */
+  height: 65vh; /* Half of the viewport height */
+  display: flex;
+  align-items: center; /* Vertically center items */
+  justify-content: center; /* Horizontally center items */
+  font-family: "Acumin-RPro";
+  color: white;
+  position: relative;
+}
+
+.content {
+  text-align: center;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-down img {
+  width: 40px; /* Adjust size of the scroll down arrow */
+}
