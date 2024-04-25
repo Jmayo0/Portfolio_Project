@@ -3,35 +3,63 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Header Bar</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
-<script src="script.js" defer></script>
+<title>Jamie Mayo Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
 
-<header class="header">
-  <div class="header__links">
-    <a href="MainPage.html" id="work-link">Work</a>
-    <a href="#" class="contact" id="contact-link">Contact</a>
-  </div>
-  <div class="header__center">
-    My Portfolio
-  </div>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="header-title">
+        JAMIE MAYO
+    </div>
 </header>
 
-<div class="main-section">
-    <div class="content">
-      <h1>Hi, I'm Jamie Mayo</h1>
-      <p>Scroll down for more</p>
-      <a href="#scroll-target" class="scroll-down">
-        <img src="scroll-down.svg" alt="Scroll down arrow">
-      </a>
+<main>
+    <div class="intro-text">
+        <h1>Hi, I'm JAMIE MAYO!</h1>
+        <p>Scroll down to see more</p>
+        <div class="chevron" onclick="scrollDown()">
+            <i class="fas fa-chevron-down"></i>
+        </div>
     </div>
-  </div>
+</main>
+<!-- Description div above the carousel -->
+<div class="carousel-description">
+    <h2>Example Projects</h2>
+    <p>Enter the name of a cocktail and discover recipes, ingredients, and more.</p>
+</div>
+<!-- Carousel for cocktail search and more -->
+<div class="carousel">
+    <div class="carousel-item active">
+        <input type="text" id="searchInput" placeholder="Search For A Cocktail" oninput="searchDrinks()">
+        <div id="result"></div>
+        <img src="" alt="Drink Image" id="drinkImage" style="display:none;">
+    </div>
+    <!-- Additional carousel items -->
+    <div class="carousel-item">
+        <h2>Other Content Here</h2>
+        <p>Additional information or content can be added here.</p>
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+</div>
 
-  <div id="scroll-target">
-    <!-- Content below the fold -->
-  </div>
+<footer>
+    <small>My Portfolio</small>
+    <div class="back-to-top">
+        <a href="#">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+</footer>
 
+<script src="script.js"></script>
 </body>
 </html>
