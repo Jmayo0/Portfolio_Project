@@ -103,8 +103,8 @@ footer small {
 
 .carousel {
   position: relative;
-  width: 800px; /* Fixed width */
-  height: 800px; /* Fixed height */
+  width: 1000px; /* Fixed width */
+  height: 600px; /* Fixed height */
   margin: 40px auto; /* Center the carousel on the page */
   overflow: hidden;
   border: 2px solid #fff; /* White border for visibility */
@@ -170,7 +170,7 @@ button.next { right: 10px; }
 
 /* Ensure the result text fits within the carousel */
 #result {
-  padding: 0 20px; /* Padding inside the result div */
+  padding: 0 75px; /* Padding inside the result div */
   max-width: 80%; /* Max width relative to carousel width */
   margin: 20px auto; /* Margin for spacing */
 }
