@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jamie Mayo Portfolio</title>
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.min.js"></script>
+    <title>Jamie Mayo Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
 
@@ -30,25 +31,24 @@
         </div>
     </div>
 </main>
-<!-- Description div above the carousel -->
+
 <div class="carousel-description">
     <h2>Example Projects</h2>
     <p>Enter the name of a cocktail and discover recipes, ingredients, and more.</p>
 </div>
-<!-- Carousel for cocktail search and more -->
+
 <div class="carousel">
-    <div class="carousel-item active">
+    <div class="carousel-item active"> <!-- Ensure the initial active item -->
         <input type="text" id="searchInput" placeholder="Search For A Cocktail" oninput="searchDrinks()">
         <div id="result"></div>
         <img src="" alt="Drink Image" id="drinkImage" style="display:none;">
     </div>
-    <!-- Additional carousel items -->
-    <div class="carousel-item">
-        <h2>Other Content Here</h2>
-        <p>Additional content will be added here.</p>
+    <div class="carousel-item" id="snakeGameContainer">
+        <button id="pausePlayButton" style="display: none;">Pause</button>
     </div>
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+    <!-- Add navigation buttons inside the carousel -->
+    <button class="prev" >&#10094;</button>
+    <button class="next" >&#10095;</button>
 </div>
 
 <footer>
