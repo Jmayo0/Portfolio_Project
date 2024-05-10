@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Show new item
       items[currentIndex].classList.add("active");
       console.log(`New currentIndex=${currentIndex}`);
-  
+      
       // Toggle game state based on currentIndex
       if (currentIndex === 1) {
         if (!snakeGameInitialized && !gamePaused) {
@@ -52,8 +52,18 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         pauseGame();
       }
+      if (currentIndex === 3) { // Adjust index as needed
+        // Load map functionality from map.js
+        loadMapFunctionality();
     }
-  
+    }
+    function loadMapFunctionality() {
+      // Dynamically load map.js script
+      const script = document.createElement('script');
+      script.src = 'map.js'; // Adjust the path if necessary
+      script.async = true;
+      document.body.appendChild(script);
+  }
     document.getElementById('searchInput').addEventListener('input', searchDrinks);
   
     // Function to search drinks based on the input value

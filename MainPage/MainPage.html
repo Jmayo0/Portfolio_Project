@@ -1,71 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/three@0.126.1/build/three.min.js"></script>
     <title>Jamie Mayo Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
-<body>
-
-<header>
-    <nav>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="map.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
         <ul>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
-    </nav>
-    <div class="header-title">
-        JAMIE MAYO
-    </div>
-</header>
+      </nav>
+      <div class="header-title">JAMIE MAYO</div>
+    </header>
 
-<main>
-    <div class="intro-text">
+    <main>
+      <div class="intro-text">
         <h1>Hi, I'm JAMIE MAYO!</h1>
         <p>Scroll down to see more</p>
         <div class="chevron" onclick="scrollDown()">
-            <i class="fas fa-chevron-down"></i>
+          <i class="fas fa-chevron-down"></i>
         </div>
+      </div>
+    </main>
+
+    <div class="carousel-description">
+      <h2>Example Projects</h2>
+      <p>
+        Here are some example projects, built with Javascript.
+      </p>
     </div>
-</main>
 
-<div class="carousel-description">
-    <h2>Example Projects</h2>
-    <p>Enter the name of a cocktail and discover recipes, ingredients, and more.</p>
-</div>
-
-<div class="carousel">
-    <div class="carousel-item active"> <!-- Ensure the initial active item -->
-        <input type="text" id="searchInput" placeholder="Search For A Cocktail" oninput="searchDrinks()">
+    <div class="carousel">
+      <div class="carousel-item active">
+        <!-- Ensure the initial active item -->
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search For A Cocktail"
+          oninput="searchDrinks()"
+        />
         <div id="result"></div>
-        <img src="" alt="Drink Image" id="drinkImage" style="display:none;">
-    </div>
-    <div class="carousel-item" id="snakeGameContainer">
-        <button id="pausePlayButton" style="display: none;">Pause</button>
-    </div>
-    <div class="carousel-item">
+        <img src="" alt="Drink Image" id="drinkImage" style="display: none" />
+      </div>
+      <div class="carousel-item" id="snakeGameContainer">
+        <button id="pausePlayButton" style="display: none">Pause</button>
+      </div>
+      <div class="carousel-item">
         <!-- Other carousel content -->
         <div id="musicVisualisationContainer"></div>
+      </div>
+      <div class="carousel-item" id="map-container">
+        <div id="map"></div>
+      </div>
+      <!-- Add navigation buttons inside the carousel -->
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
     </div>
-    <!-- Add navigation buttons inside the carousel -->
-    <button class="prev" >&#10094;</button>
-    <button class="next" >&#10095;</button>
-</div>
 
-<footer>
-    <small>My Portfolio</small>
-    <div class="back-to-top">
+    <footer>
+      <small>My Portfolio</small>
+      <div class="back-to-top">
         <a href="#">
-            <i class="fas fa-arrow-up"></i>
+          <i class="fas fa-arrow-up"></i>
         </a>
-    </div>
-</footer>
+      </div>
+    </footer>
 
-<script src="script.js"></script>
-<script src="music-visualisation.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
-</body>
+    <script src="script.js"></script>
+    <script src="music-visualisation.js"></script>
+    <script src="map.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/18.6.4/tween.umd.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2INDlXyarxIzAH83tvt_ZeUudSyHPq7Y&callback=initMap"async defer></script>
+  </body>
 </html>
