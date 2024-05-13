@@ -14,34 +14,41 @@ document.addEventListener("DOMContentLoaded", () => {
     let startButtonVisible = true; // Flag to track if the start button is visible
     let playButtonPositionedCenter = false; // Flag to track if play button is positioned in the center
   
-    const items = document.querySelectorAll(".carousel-item");
-    const prevButton = document.querySelector(".prev");
-    const nextButton = document.querySelector(".next");
+    const prevButtonCarousel1 = document.querySelector("#carousel1 .prev");
+    const nextButtonCarousel1 = document.querySelector("#carousel1 .next");
+    const prevButtonCarousel2 = document.querySelector("#carousel2 .prev");
+    const nextButtonCarousel2 = document.querySelector("#carousel2 .next");
   
-    prevButton.addEventListener("click", () => navigateCarousel(-1));
-    nextButton.addEventListener("click", () => navigateCarousel(1));
+    // Add event listeners for Carousel 1 buttons
+    prevButtonCarousel1.addEventListener("click", () => navigateCarousel(-1));
+    nextButtonCarousel1.addEventListener("click", () => navigateCarousel(1));
+  
+    // Add event listeners for Carousel 2 buttons
+    prevButtonCarousel2.addEventListener("click", () => navigateCarousel(-1));
+    nextButtonCarousel2.addEventListener("click", () => navigateCarousel(1));
   
     function navigateCarousel(direction) {
+      const carousel1Items = document.querySelectorAll("#carousel1 .carousel-item");
+      const carousel2Items = document.querySelectorAll("#carousel2 .carousel-item");
+    
       console.log(
         `Navigating carousel: direction=${direction}, currentIndex before update=${currentIndex}`
       );
-      items[currentIndex].classList.remove("active"); // Hide current item
-  
-      // Update currentIndex
+      carousel1Items[currentIndex].classList.remove("active");
+      carousel2Items[currentIndex].classList.remove("active");
+    
       currentIndex += direction;
-  
-      // Ensure the currentIndex stays within the bounds of items
-      if (currentIndex >= items.length) {
+    
+      if (currentIndex >= carousel1Items.length) {
         currentIndex = 0;
       } else if (currentIndex < 0) {
-        currentIndex = items.length - 1;
+        currentIndex = carousel1Items.length - 1;
       }
-  
-      // Show new item
-      items[currentIndex].classList.add("active");
+    
+      carousel1Items[currentIndex].classList.add("active");
+      carousel2Items[currentIndex].classList.add("active");
       console.log(`New currentIndex=${currentIndex}`);
-      
-      // Toggle game state based on currentIndex
+    
       if (currentIndex === 1) {
         if (!snakeGameInitialized && !gamePaused) {
           initializeSnakeGame();
@@ -52,10 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         pauseGame();
       }
-      if (currentIndex === 3) { // Adjust index as needed
-        // Load map functionality from map.js
+      if (currentIndex === 3) {
         loadMapFunctionality();
-    }
+      }
     }
     function loadMapFunctionality() {
       // Dynamically load map.js script

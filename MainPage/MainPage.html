@@ -16,8 +16,8 @@
     <header>
       <nav>
         <ul>
-          <li><a href="#">Work</a></li>
-          <li><a href="#">Contact</a></li>
+        <li><a href="../MainPage/MainPage.html">Main Page</a></li>
+        <li><a href="../ContactPage/index.html">Contact</a></li>
         </ul>
       </nav>
       <div class="header-title">JAMIE MAYO</div>
@@ -38,7 +38,7 @@
       <p>Here are some example projects, built with Javascript.</p>
     </div>
 
-    <div class="carousel">
+    <div class="carousel" id="carousel1">
       <div class="carousel-item active">
         <!-- Ensure the initial active item -->
         <input
@@ -65,8 +65,74 @@
       <button class="next">&#10095;</button>
     </div>
 
+    <div class="carousel" id="carousel2">
+        <div class="carousel-item active">
+            <div class="carousel-description">
+                <h2>Drinks API</h2>
+                <p>On Slide 1, users can interact with a feature that helps them find information about different drinks. Here's how it works:</p>
+                <ul>
+                    <li><strong>Search Bar Interaction:</strong> Users can type the name of a drink they're curious about into a search bar.</li>
+                    <li><strong>Display Area:</strong> After typing, the code starts searching for the drink's details. It then displays this information in a special area on the webpage.</li>
+                    <li><strong>Drink Details:</strong> For each drink found, users can see details like the name, category, alcoholic content, and how it's served. The code goes through a list of ingredients needed for the drink and shows them too. It also provides instructions on how to make the drink.</li>
+                    <li><strong>Drink Image:</strong> Along with the details, users can see a picture of the drink next to the information.</li>
+                    <li><strong>Feedback for No Results:</strong> If the drink name doesn't match anything in the search, the code lets users know that it couldn't find anything. It also hides the picture so the page looks neat.</li>
+                </ul>
+                <p>Behind the scenes, the code, written in JavaScript, looks at the user's input, searches through a big list of drinks using an external API called "The Cocktail DB," and organizes the information neatly for display. It's like having a personal drink expert right on the webpage!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-description">
+                <h2>Snake Game</h2>
+                <p>On Slide 2, users engage with an interactive snake game. Here's a breakdown of what they experience:</p>
+                <ul>
+                    <li><strong>Game Initialization:</strong> When the slide loads, the code sets up the environment for the snake game. It prepares the game canvas and initializes the game components.</li>
+                    <li><strong>Snake Movement:</strong> Users control the snake's movement using arrow keys on their keyboard. The snake moves around the game area, eating food and growing longer as it does so.</li>
+                    <li><strong>Game Mechanics:</strong> The snake can wrap around the edges of the game area, reappearing on the opposite side if it goes off-screen. When the snake eats food, it grows longer, and the player's score increases.</li>
+                    <li><strong>Game Pausing:</strong> Users can pause and resume the game by clicking the "Pause" button displayed on the screen. This button toggles between "Pause" and "Play" depending on the game's current state.</li>
+                    <li><strong>Visual Feedback:</strong> The game provides visual feedback through console logs, indicating actions such as snake movement, food placement, and game initialization.</li>
+                </ul>
+                <p>Behind the Scenes: The game is built using JavaScript and utilizes the Three.js library for rendering 3D graphics. It employs concepts like scene setup, camera positioning, and object manipulation to create an immersive gaming experience.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-description">
+                <h2>Music Visualization</h2>
+                <p>On Slide 3, users are treated to a mesmerizing music visualization experience. Here's what they'll encounter:</p>
+                <ul>
+                    <li><strong>Three.js Scene Setup:</strong> The slide initializes a Three.js scene, setting up a 3D environment for the visualization.</li>
+                    <li><strong>Visual Elements:</strong> A large sphere and a textured environment are created to serve as the primary visual elements.</li>
+                    <li><strong>Lighting:</strong> Lighting is added to the scene to enhance the visual quality of the elements.</li>
+                    <li><strong>Audio Integration:</strong> Users can play music by interacting with the "Play" button. The music is synchronized with the animation for a cohesive experience.</li>
+                    <li><strong>Dynamic Animation:</strong> The sphere rotates and scales dynamically in response to the music, creating visually stunning effects.</li>
+                </ul>
+                <p>Behind the Scenes: The visualization leverages Three.js and HTML5 audio capabilities to create an immersive experience. It combines 3D rendering techniques with audio analysis to synchronize the animation with the music, resulting in a captivating display.</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="carousel-description">
+                <h2>Premier League Stadium Map</h2>
+                <p>On Slide 4, users can explore an interactive map showcasing Premier League stadiums. Here's what they'll find:</p>
+                <ul>
+                    <li><strong>Map Interaction:</strong> Users can navigate the map to view the locations of various Premier League stadiums.</li>
+                    <li><strong>Marker Display:</strong> Each stadium is marked on the map with a pin icon for easy identification.</li>
+                    <li><strong>Info Window:</strong> Clicking on a pin opens an info window displaying details about the club and stadium.</li>
+                    <li><strong>Data Source:</strong> The stadium data is fetched from a CSV file hosted online, ensuring the information is up-to-date.</li>
+                </ul>
+                <p>Behind the Scenes: The map is powered by the Google Maps JavaScript API, allowing seamless integration of interactive features. JavaScript fetches stadium data from a CSV file, parses it, and dynamically creates markers and info windows for each stadium location.</p>
+            </div>
+        </div>
+        <!-- Add more placeholder items as needed -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+
+
+
+
+
     <footer>
-      <small>My Portfolio</small>
+      <small>My Portfolio - Jamie Mayo</small>
       <div class="back-to-top">
         <a href="#">
           <i class="fas fa-arrow-up"></i>
