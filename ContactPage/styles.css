@@ -1,98 +1,98 @@
 /* Reset styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #000;
-  color: #fff;
-}
-
-/* Header styles */
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin-right: 10px;
-}
-
-nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #aaa;
-}
-
-.header-title {
-  font-size: 20px;
-}
-
-/* Main styles */
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
-}
-
-.contact-section {
-  padding: 20px;
-}
-
-.contact-section h1 {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-.contact-info p {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.contact-info a {
-  color: #fff;
-}
-
-/* Footer styles */
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  padding: 15px;
-}
-
-footer small {
-  color: #aaa;
-}
-
-.back-to-top {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-}
-
-.back-to-top a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.back-to-top i {
-  font-size: 20px;
-}
+    margin: 0; /* Reset margin to 0 */
+    padding: 0; /* Reset padding to 0 */
+    box-sizing: border-box; /* Box model includes padding and border in the element's total width and height */
+  }
+  
+  /* Body styles */
+  body {
+    font-family: Arial, sans-serif; /* Set the default font family */
+    background-color: #000; /* Set background color to black */
+    color: #fff; /* Set text color to white */
+  }
+  
+  /* Header styles */
+  header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly across the container */
+    padding: 20px; /* Add padding around header */
+  }
+  
+  nav ul {
+    list-style: none; /* Remove default list styles */
+    display: flex; /* Use flexbox for layout */
+  }
+  
+  nav ul li {
+    margin-right: 10px; /* Add margin between navigation items */
+  }
+  
+  nav ul li a {
+    color: #fff; /* Set link color to white */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease; /* Smooth transition for link color */
+  }
+  
+  nav ul li a:hover {
+    color: #aaa; /* Change link color on hover */
+  }
+  
+  .header-title {
+    font-size: 20px; /* Set font size for header title */
+  }
+  
+  /* Main styles */
+  main {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    height: 100vh; /* Set main section height to viewport height */
+    text-align: center; /* Center text horizontally */
+  }
+  
+  .contact-section {
+    padding: 20px; /* Add padding around contact section */
+  }
+  
+  .contact-section h1 {
+    font-size: 40px; /* Set font size for contact section heading */
+    margin-bottom: 20px; /* Add margin below contact section heading */
+  }
+  
+  .contact-info p {
+    font-size: 18px; /* Set font size for contact information */
+    margin-bottom: 10px; /* Add margin below each contact information paragraph */
+  }
+  
+  .contact-info a {
+    color: #fff; /* Set link color to white */
+  }
+  
+  /* Footer styles */
+  footer {
+    position: fixed; /* Position footer fixed at the bottom of the viewport */
+    bottom: 0; /* Align footer to the bottom */
+    width: 100%; /* Set footer width to 100% of the viewport */
+    text-align: center; /* Center text horizontally */
+    padding: 15px; /* Add padding around footer */
+  }
+  
+  footer small {
+    color: #aaa; /* Set color for small text in footer */
+  }
+  
+  .back-to-top {
+    position: absolute; /* Position back-to-top button absolutely */
+    right: 20px; /* Align button to the right */
+    bottom: 20px; /* Align button to the bottom */
+  }
+  
+  .back-to-top a {
+    color: #fff; /* Set link color to white */
+    text-decoration: none; /* Remove underline from link */
+  }
+  
+  .back-to-top i {
+    font-size: 20px; /* Set font size for back-to-top icon */
+  }
