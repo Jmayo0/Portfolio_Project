@@ -423,3 +423,15 @@ document.addEventListener("keydown", (event) => {
     }
   }
 });
+var inputFields = document.querySelectorAll('input[type="text"], input[type="email"]');
+inputFields.forEach(function (inputField) {
+    inputField.addEventListener("focus", function () {
+        // Disable the event listener for changing snake direction
+        document.removeEventListener("keydown", changeSnakeDirection);
+    });
+
+    inputField.addEventListener("blur", function () {
+        // Re-enable the event listener for changing snake direction
+        document.addEventListener("keydown", changeSnakeDirection);
+    });
+});

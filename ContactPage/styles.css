@@ -44,55 +44,91 @@
   
   /* Main styles */
   main {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    height: 100vh; /* Set main section height to viewport height */
-    text-align: center; /* Center text horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
   }
   
+  .content-container {
+    max-width: 600px; /* Adjust the max-width as needed */
+    width: 100%;
+  }
+  
+  /* Existing content styles */
   .contact-section {
-    padding: 20px; /* Add padding around contact section */
+    padding: 20px;
+    margin-bottom: 30px; /* Add margin at the bottom to create space between existing content and form */
   }
   
   .contact-section h1 {
-    font-size: 40px; /* Set font size for contact section heading */
-    margin-bottom: 20px; /* Add margin below contact section heading */
+    font-size: 40px;
+    margin-bottom: 20px;
   }
   
   .contact-info p {
-    font-size: 18px; /* Set font size for contact information */
-    margin-bottom: 10px; /* Add margin below each contact information paragraph */
+    font-size: 18px;
+    margin-bottom: 10px;
   }
   
   .contact-info a {
-    color: #fff; /* Set link color to white */
+    color: #fff;
   }
   
-  /* Footer styles */
-  footer {
-    position: fixed; /* Position footer fixed at the bottom of the viewport */
-    bottom: 0; /* Align footer to the bottom */
-    width: 100%; /* Set footer width to 100% of the viewport */
-    text-align: center; /* Center text horizontally */
-    padding: 15px; /* Add padding around footer */
+  /* Form section styles */
+  .form-section {
+    padding: 20px;
+    background-color: #333; /* Add background color to the form section */
+    border-radius: 5px;
   }
   
-  footer small {
-    color: #aaa; /* Set color for small text in footer */
+  #insertForm {
+    margin-top: 20px;
   }
   
-  .back-to-top {
-    position: absolute; /* Position back-to-top button absolutely */
-    right: 20px; /* Align button to the right */
-    bottom: 20px; /* Align button to the bottom */
+  #insertForm h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
   }
   
-  .back-to-top a {
-    color: #fff; /* Set link color to white */
-    text-decoration: none; /* Remove underline from link */
+  #insertForm input[type="text"],
+  #insertForm input[type="email"],
+  #insertForm input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: #fff;
   }
   
-  .back-to-top i {
-    font-size: 20px; /* Set font size for back-to-top icon */
+  #insertForm input[type="submit"] {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #insertForm input[type="submit"]:hover {
+    background-color: #777;
+  }
+
+  .modalphp {
+    display: none; /* Hide the modal by default */
+    position: fixed;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center the modal precisely */
+    width: 50%; /* Adjust width as needed */
+    max-width: 400px; /* Adjust max-width as needed */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  
+  .modalphp-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    color: #000;
   }

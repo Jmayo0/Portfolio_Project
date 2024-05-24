@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Jamie Mayo Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -22,21 +23,36 @@
     </header>
 
     <main>
-      <div class="contact-section">
-        <h1>Contact Me</h1>
-        <div class="contact-info">
-          <p>Name: Jamie Mayo</p>
-          <p>University: Bath Spa University</p>
-          <p>Studying: Computing</p>
-          <p>Interests: Web Development, Design</p>
-          <p>
-            Email:
-            <a href="mailto:jameimayo18@hotmail.co.uk"
-              >jameimayo18@hotmail.co.uk</a
-            >
-          </p>
+      <div class="content-container">
+        <!-- Existing content -->
+        <div class="contact-section">
+          <h1>Contact Me</h1>
+          <div class="contact-info">
+            <p>Name: Jamie Mayo</p>
+            <p>University: Bath Spa University</p>
+            <p>Studying: Computing</p>
+            <p>Interests: Web Development, Design</p>
+            <p>
+              Email:
+              <a href="mailto:jameimayo18@hotmail.co.uk"
+                >jameimayo18@hotmail.co.uk</a
+              >
+            </p>
+          </div>
         </div>
+    
+        <!-- Form -->
+        <div class="form-section">
+          <h2>Insert Data</h2>
+          <form id="insertForm">
+              Name: <input type="text" name="name" required><br>
+              Email: <input type="email" name="email" required><br>
+              <input type="submit" value="Submit">
+          </form>
       </div>
+      </div>
+      <div id="modalphp" class="modalphp">
+        <div class="modalphp-content"></div>
     </main>
 
     <footer>
@@ -48,6 +64,7 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="formSubmit.js"></script>
+    
   </body>
 </html>
