@@ -7,17 +7,17 @@ error_reporting(E_ALL);
 $name = isset($_POST['name']) ? $_POST['name'] : '';
 $email = isset($_POST['email']) ? $_POST['email'] : '';
 
-// Validate data (simple validation for example purposes)
+// Validate data 
 if(empty($name) || empty($email)) {
     echo "Name and email are required fields.";
     exit();
 }
 
 // Database connection details
-$servername = "localhost"; // Change to localhost since you are using XAMPP
+$servername = "localhost"; // Change to localhost since we are using XAMPP
 $username = "root"; // Default username for XAMPP MySQL
 $password = ""; // Default password for XAMPP MySQL is empty
-$dbname = "userdata"; // Replace with the name of your XAMPP database
+$dbname = "userdata"; //Name of the XAMPP database
 
 // Connect to the database
 $conn = new mysqli($servername, $username, $password, $dbname);

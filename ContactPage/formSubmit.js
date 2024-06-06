@@ -8,7 +8,7 @@ $(document).ready(function(){
         // Send form data to backend script
         $.ajax({
             type: 'POST',
-            url: 'form.php', // Path to your backend script
+            url: 'form.php', // Path to the backend script
             data: formData,
             success: function(response){
                 alert(response); // Display a message indicating success or failure
